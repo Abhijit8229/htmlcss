@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 body {
   font-family: Arial, sans-serif;
@@ -7,8 +8,14 @@ body {
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
+  overflow-x: hidden;
 }
-
+h1,h2,h3{
+  font:400
+}
+a{
+  font-weight: 500;
+}
 header {
   
   color: blue;
@@ -16,10 +23,58 @@ header {
   text-align: center;
 }
 
-header .logo img {
-  max-width: 100px;
-  display: block;
-  margin: 0 auto;
+header .logo {
+  background-image: url("./public/Computer_science_education.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: hsl(0,0,0,0.9);
+  position: relative;
+  width:auto;
+  min-height: 40vh;
+  height: 100%;
+  max-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  margin: 0px 0 15px 0;
+  color: white;
+}
+.logo >*{
+  z-index: 100;
+}
+header .logo::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #f4f4f4;
+  background-color: hsl(0 0 0);
+  opacity: .7;
+  border-radius: 10px;
+  z-index: 1;
+
+}
+ button{
+  padding: 15px 40px;
+  cursor: pointer;
+  background-color: blue;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  transition: all 400ms;
+}
+button:hover{
+  background-color: navy;
+}
+.logo a{
+  text-decoration: none;
+  color: white;
+  font-size: medium;
+
 }
 
 header h1 {
@@ -52,14 +107,24 @@ nav ul li a:hover {
   background-color: grey;
   
 }
-
-main {
-  padding: 20px;
+nav ul li a:active{
+  background-color: blue;
 }
-
+nav ul li a[tabindex]:focus{
+  background-color: blue;
+}
+main {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+.active{
+  background-color: blue;
+}
 section {
   background-color: white;
-  margin: 20px 0;
+  margin: 0px 0;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
