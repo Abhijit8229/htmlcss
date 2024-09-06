@@ -92,7 +92,7 @@ nav ul {
 
 nav ul li {
   display: inline;
-  margin: 0 15px;
+    margin: 0 15px;
   padding-bottom: 5px;
 }
 
@@ -141,6 +141,38 @@ section {
   background-color: #f4f4f4;
   border-radius: 10px;
   text-align: center;
+}
+#overview aside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+article {
+  width: 270px;
+  height: 250px;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #0056b3;
+  font-weight: bold;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  margin: 10px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+article:hover {
+  background-color: yellow;
+}
+article:nth-child(odd){
+  margin-top: 100px;
+}
+article h3 {
+  margin: 0;
+  padding: 20px;
 }
 section h2{
   color: blue;
