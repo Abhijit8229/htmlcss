@@ -193,7 +193,47 @@ footer {
   bottom: 0;
   width: 100%;
 }
+#about div{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 
+
+ 
+  }
+iframe{
+    aspect-ratio: 2/1;
+    width: 50%;
+    height: 100%;
+  
+}
+footer > div{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+footer a{
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+.icon_insta{
+ border-radius: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 20px;
+ cursor: pointer;
+ font-size: 30px;
+ background-color: #0056b3;
+ color: white;
+ transition: all 0.3s;
+}
+.icon_insta:hover{
+  transform: translateY(-10px);
+}
 @media (max-width: 768px) {
   nav ul li {
       display: block;
